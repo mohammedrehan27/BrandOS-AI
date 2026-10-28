@@ -1,3 +1,3 @@
-import { app } from '../server/app.ts';
+import { app } from './backend.mjs';
 
 export default app;
