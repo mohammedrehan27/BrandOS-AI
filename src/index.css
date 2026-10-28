@@ -1,0 +1,230 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-base: #F7F8F5;
+    --surface: #FFFFFF;
+    --surface-secondary: #F7F8F5;
+    --border-color: #E5E8E1;
+    --border-subtle: #EFF1EC;
+    --text-primary: #29332E;
+    --text-muted: #57635D;
+    --text-subtle: #7E8C84;
+    --accent-sage: #647C70;
+    --accent-indigo: #7774A8;
+    --accent-amber: #C6974F;
+    color-scheme: light;
+  }
+
+  html.dark {
+    --bg-base: #0B0F0D;
+    --surface: #141A17;
+    --surface-secondary: #18201C;
+    --border-color: #232E28;
+    --border-subtle: #1B241F;
+    --text-primary: #F0F4F1;
+    --text-muted: #9EADA3;
+    --text-subtle: #73837A;
+    --accent-sage: #7B9A8B;
+    --accent-indigo: #9390C5;
+    --accent-amber: #D8A960;
+    color-scheme: dark;
+  }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-base);
+    color: var(--text-primary);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    min-height: 100%;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+
+  #root {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-base);
+  }
+
+  /* Custom subtle scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #D2D7CC;
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #A4B0A9;
+  }
+
+  html.dark ::-webkit-scrollbar-thumb {
+    background: #2D3A33;
+  }
+  html.dark ::-webkit-scrollbar-thumb:hover {
+    background: #405248;
+  }
+}
+
+@layer utilities {
+  .bg-soft-ivory {
+    background-color: var(--bg-base);
+  }
+  .card-surface {
+    background-color: var(--surface);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+  }
+  .text-charcoal {
+    color: var(--text-primary);
+  }
+  .text-charcoal-muted {
+    color: var(--text-muted);
+  }
+  .border-subtle {
+    border-color: var(--border-color);
+  }
+}
+
+/* ==============================================================================
+   Dark Theme Adaptive Overrides for BrandOS AI Enterprise Design System
+   ============================================================================== */
+html.dark {
+  /* Surfaces and Layouts */
+  .bg-white {
+    background-color: #141A17 !important;
+  }
+  .bg-\[\#F7F8F5\] {
+    background-color: #18201C !important;
+  }
+  .bg-\[\#F7F8F5\]\/60 {
+    background-color: rgba(24, 32, 28, 0.6) !important;
+  }
+  .bg-\[\#EFF3F0\] {
+    background-color: #1C2721 !important;
+  }
+
+  /* Hover states */
+  .hover\:bg-\[\#F7F8F5\]:hover {
+    background-color: #1E2722 !important;
+  }
+  .hover\:bg-\[\#F7F8F5\]\/60:hover {
+    background-color: rgba(30, 39, 34, 0.6) !important;
+  }
+  .hover\:bg-\[\#EFF3F0\]:hover {
+    background-color: #223029 !important;
+  }
+
+  /* Typography */
+  .text-\[\#29332E\] {
+    color: #F0F4F1 !important;
+  }
+  .text-\[\#57635D\] {
+    color: #9EADA3 !important;
+  }
+  .text-\[\#7E8C84\] {
+    color: #73837A !important;
+  }
+  .text-\[\#A4B0A9\] {
+    color: #55635C !important;
+  }
+
+  /* Borders */
+  .border-\[\#E5E8E1\] {
+    border-color: #232E28 !important;
+  }
+  .border-\[\#D2D7CC\] {
+    border-color: #2E3C34 !important;
+  }
+  .border-\[\#C2CEC7\] {
+    border-color: #384A41 !important;
+  }
+  .border-\[\#C2CEC7\]\/60 {
+    border-color: rgba(56, 74, 65, 0.6) !important;
+  }
+  .hover\:border-\[\#D2D7CC\]:hover {
+    border-color: #3D4F44 !important;
+  }
+
+  /* Status Badges */
+  .bg-\[\#EAF3EB\] {
+    background-color: #12241A !important;
+  }
+  .text-\[\#22543D\] {
+    color: #4ADE80 !important;
+  }
+  .border-\[\#C6E1CD\] {
+    border-color: #1D432E !important;
+  }
+
+  .bg-\[\#F9EAEA\] {
+    background-color: #2A1515 !important;
+  }
+  .text-\[\#9B2C2C\] {
+    color: #F87171 !important;
+  }
+  .border-\[\#F3C7C7\] {
+    border-color: #4C1D1D !important;
+  }
+
+  .bg-\[\#FAF1E1\] {
+    background-color: #2A2110 !important;
+  }
+  .text-\[\#8C5E1A\] {
+    color: #FBBF24 !important;
+  }
+  .border-\[\#F2DEC0\] {
+    border-color: #4D3A16 !important;
+  }
+
+  .bg-\[\#F1F0FA\] {
+    background-color: #1A182E !important;
+  }
+  .text-\[\#464373\],
+  .text-\[\#4B487A\] {
+    color: #A5B4FC !important;
+  }
+  .border-\[\#D8D6EF\] {
+    border-color: #2D2B57 !important;
+  }
+
+  /* Ring white overrides */
+  .ring-white {
+    --tw-ring-color: #141A17 !important;
+  }
+
+  /* Input and Textarea focus and placeholder */
+  input, textarea, select {
+    color-scheme: dark;
+  }
+  .placeholder-\[\#7E8C84\]::placeholder {
+    color: #55635C !important;
+  }
+  .focus\:bg-white:focus {
+    background-color: #18201C !important;
+  }
+
+  /* Shadows */
+  .shadow-card {
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.4), 0 1px 2px -1px rgba(0, 0, 0, 0.3) !important;
+  }
+  .shadow-subtle {
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.3) !important;
+  }
+  .shadow-elevated {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5), 0 2px 4px -2px rgba(0, 0, 0, 0.3) !important;
+  }
+  .shadow-modal {
+    box-shadow: 0 12px 28px -4px rgba(0, 0, 0, 0.7), 0 4px 8px -2px rgba(0, 0, 0, 0.4) !important;
+  }
+}
